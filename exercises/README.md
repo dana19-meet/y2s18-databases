@@ -24,14 +24,11 @@ much you liked them and what you've learned.
 
 4. Now, after doing this, you have enough information to create a database of
 the knowledge you've learned so far. The database should have:
-- A primary key (what would this be for the set of articles?). Choose an attribute
-appropriately.
+- A primary key (what would this be for the set of articles?). Choose an attribute appropriately.
 - The topic of the article (what did your friends want to learn about?)
-- The title of the relevant article that you've chosen. This can be the same
-as the topic of the article, but it does not have to be!
+- The title of the relevant article that you've chosen. This can be the same as the topic of the article, but it does not have to be!
 - Your rating of the article, from 1-10.
-Edit `knowledge_model.py` and create a table, named `knowledge`, to create a table
-which stores this information.
+Edit `knowledge_model.py` and create a table, named `knowledge`, to create a table which stores this information.
 
 5. Add a `__repr__` function to your table. That is, when you want to print an instance
 of the Knowledge class, which has primary key 1, a topic of weather, a title of rainbow,
