@@ -6,19 +6,20 @@ from sqlalchemy import create_engine
 Base = declarative_base()
 
 class Knowledge(Base):
-	ID number=column(integer,primary_key=True)
-	name=column(string)
-	topic=column(string)
-	rating=column(integer)
+	__tablename__='know'
+	IDnumber=Column(Integer,primary_key=True)
+	name=Column(String)
+	topic=Column(String)
+	rating=Column(Integer)
 	def __repr__(self):
-		return ("primarykey: {}\n"
-				"name: {}\n"
-				"topic: {}\n"
-				"rating: {}").format(
-					self.primarykey,
-					self.name,
-					self.topic,
-					self.rating)
-				print("If you want to learn about "+self.topic+", you should look at the Wikipedia article called "+self.name+". We gave this article a rating of "+self.rating+" out of 10!")
+		return("If you want to learn about {}, "
+			"you should look at the Wikipedia article called {}. "
+			"We gave this article a rating of {} out of 10!").format(
+			self.topic,
+			self.name,
+			self.rating)
 
-site1= Knowledge(1,"sport","swimming",8)
+site1= Knowledge(IDnumber=1,name="sport",topic="swimming",rating=8)
+# print(site1.__repr__())
+
+
