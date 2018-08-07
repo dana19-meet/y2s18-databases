@@ -12,9 +12,9 @@ class Knowledge(Base):
 	topic=Column(String)
 	rating=Column(Integer)
 	def __repr__(self):
-		return("If you want to learn about {}, "
+		return("\n If you want to learn about {}, "
 			"you should look at the Wikipedia article called {}. "
-			"We gave this article a rating of {} out of 10!").format(
+			"We gave this article a rating of {} out of 10! ").format(
 			self.topic,
 			self.name,
 			self.rating)
